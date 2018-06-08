@@ -1,0 +1,43 @@
+
+Refactor 1 for Iteration 3
+By: Alex Tuckner : 4730040 : tuckn016
+
+
+The files that I have changed for this refactor are arena.cc
+
+The method that I wanted to simplify to an outside user was the 
+	checkForObjectInProximity method within the arena at lines 501 and 502
+	since it has a lot of complicated math and can easily get confusing. 
+
+So, to do this I changed the variable triangle_theta from this:
+
+double triangle_theta = Positive(static_cast<int>(atan(radius/dist)*180/3.14));
+
+to this:
+
+double triangle_theta = get_triangle_theta(radius, dist);
+double get_triangle_theta(double radius, double distance) {
+  return Positive(static_cast<int>(atan(radius/dist)*180/3.14));
+}
+
+
+
+
+I have also done the same with distance_theta as it is very similar.  From this:
+
+Positive(static_cast<int>(atan2(deltaY, deltaX)*180/3.14));
+
+
+to this:
+
+double distance_theta = get_distance_theta(deltaX, deltaY);
+double Arena::get_distance_theta(double deltaX, double deltaY) {
+  Positive(static_cast<int>(atan2(deltaY, deltaX)*180/3.14));
+}
+
+These new methods are created at the bottom of the file at lines 536 and 540
+The objective of this refactor was to make the code simpler to understand for a
+	new developer looking at this project. Taking all the complicated math and
+	putting it off to the side because it only complicates the original functions
+	goal which was to determine if there was an object in the proximity of a
+	robot.

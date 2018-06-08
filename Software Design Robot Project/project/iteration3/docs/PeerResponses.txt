@@ -1,0 +1,123 @@
+
+
+Responder: Alex Tuckner : 4730040 : tuckn016
+
+
+Author: Q Bayo : Bayo0006
+
+Question 1:
+
+The most effective sentence in the introduction was:
+The goal of the game is for the player to freeze all the "robots" in the arena by colliding with them.
+This sentence provides an idea of what the goal is for the game and the idea behind the project.
+
+
+Question 2:
+
+This is PlayerSim v2.0. It is a simulation game allowing the player to control the player in an arena.
+I think that this sentence is a little confusing the first time you read it through. I think an
+easy improvement would be to say "allowing the user to control the player in the arena"
+
+
+Question 3:
+
+A good sentence I found was this one:
+At the highest level, class GraphicsArenaViewer controls everything–from rendering graphics to asking
+ all relevant parties to update themselves at each frame, but its main responsibility is the graphics
+ for the simulation game.
+
+ The low level details in this case being the "asking all relevant parties to update themselves at each frame"
+
+
+ Question 4:
+ I think that this sentence from (3) is effective because describes in detail the general idea of what 
+ the GraphicsArenaViewer is doing in this program, but also describes in detail such as how it tells 
+ all relevant parties to update themselves at each frame.  I like that he finishes the sentence with 
+ although it does this, it should be noted that it is mostly for the graphics.
+
+
+ Question 5:
+
+ For example, they can collide with one another. In such cases, events such as EventCollision will be
+ generated and passed down to the relevant entities, so that these entities can update their states accordingly.
+
+ This sentence I feel is underdeveloped because the author does not go into detail about the EventCollision.
+ I feel like he could describe more about what the events are or how they interact with the objects.  For example,
+ the events are classes that become created when events occur within the arena.  
+
+
+ Question 6:
+ Extending on the sentence from (5):
+ I think this would be the perfect place to bring up the idea of the "Observer" pattern that has been 
+ implemented throughout the program, and could go into more detail about how these events are passed 
+ around within the program.  I.e. the Arena telling the sensors that events happen and the robot checking
+ it's sensors at each timestep.  This document feels as though it is really lacking design thoughts and
+ ideas that are important to the functionality of the program, presenting a clearer view of what the
+ programmer was thinking when they wrote the program initially.
+
+
+Question 7:
+
+Q makes it very clear that the place to be coding in this project is the arena as this is updating the 
+time for every entity, checking all of the events for events between objects, and contains all 
+entities and their sensors.  He made it very clear how important the arena was in the code and 
+emphasized its importance throughout. 
+
+
+Question 8:
+
+Im unsure if it is a doxygen issue or if he had just not completed his documentation for iteration2, 
+but it appears as though there is almost no documentation throughout the arena class.  
+
+
+Question 9:
+It appears as though once again there is very little documentation and should be implemented throughout
+I'm not really sure what else to say since there isn't much there.  
+
+
+Question 10:
+My first reaction was to look in the top right corner to the description.  This popped out at me because
+it was the biggest thing on the page. I think it is very good that this is the first thing that I noticed
+because it will give an overview of what to expect within the UML diagram and attempt to understand it
+before delving in to it. 
+
+
+Question 11:
+
+He used most of the specific arrows to suggest relationships, whereas in mine I only had the 100% necessary
+ones such as the inheritance one.  I think that this would make my UML more clear to an outside user. 
+
+
+Question 12:
+I think that the most successful part of this author's writing was his ability to describe things in 
+what seemed like the perfect amount of detail.  It seemed like he was able to correctly identify the 
+aspects that were important, but when he found himself going too in depth, he would back off a little
+and keep it understandable to the reader.  This style is great because it scratches the surface of the 
+code without overwhelming the reader and is very simple to understand.
+
+I think that the parts of his writing that needs some rework is just the pure amount of comments that
+he was able to supply.  Although I think his writing was great, there was not enough of it throughout
+and could use more to further help the reader understand.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

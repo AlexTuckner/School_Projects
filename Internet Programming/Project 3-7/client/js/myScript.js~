@@ -1,0 +1,33 @@
+function addEmptyTableRow(){
+	var output = "<tr><td>" + "</td><td>" +
+	'<input type="text" class="form-control" name="newUserName" required maxlength="15">' + "</td><td>" +
+	'<input type="text" class="form-control" name="newLogin" required maxlength="15">' + "</td><td>" +
+	'<input type="text" class="form-control" name="newPassword" required maxlength="15">' + "</td><td>" +
+	'<input type="submit" value="Submit" form="formEdit">' +
+	'<input type="submit" value="Exit" form="formEdit" formaction="/resetAdmin" formnovalidate>' + "</td></tr>";
+	document.getElementsByTagName("tbody")[0].innerHTML += output;
+}
+
+
+function getUserInformation(){
+	var userid = $(event.target).closest('.urow').find('.userid');
+	//alert("UID: " + userid[0].innerHTML);
+	var username = $(event.target).closest('.urow').find('.username');
+	//alert("Name: " + username[0].innerHTML);
+	var userLogin = $(event.target).closest('.urow').find('.userlogin');
+	//alert("Login: " + userLogin[0].innerHTML);
+	var userData = {
+		id: userid,
+		username: username,
+		login: userlogin,
+	};
+	
+	$.ajax({
+	url: "/deleteUser",
+	type: 'POST',
+	data: userData
+	})
+	
+	location.reload(true);
+
+}

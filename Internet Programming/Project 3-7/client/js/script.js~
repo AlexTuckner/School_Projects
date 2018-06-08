@@ -1,0 +1,35 @@
+"use strict";
+
+(function() {
+	// the API end point
+	var url = "getListOfFavPlaces";
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+	
+	xmlhttp.onreadystatechange = function() {
+    	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+	   	var myArr = JSON.parse(xmlhttp.responseText);
+	      fillTable(myArr); 
+		}
+	};
+	
+	function fillTable(response) {
+		console.log('fillTable');
+		var output = "";
+		for (var i in response) {
+			for (var k in response[i].placeList){
+			output +="<tr><td>" + 
+			response[i].placeList[k].placename + "<td><td>" + 
+			response[i].placeList[k].addressline1 + 
+			response[i].placeList[k].addressline2 + "<td><td>" +
+			response[i].placeList[k].opentime + "<td><td>" +
+			response[i].placeList[k].closetime + "<td><td>" +
+			response[i].placeList[k].additionalinfo + "<td><td>" +
+			response[i].placeList[k].additionalinfourl + "<td></tr>";
+			}
+		}
+		document.getElementsByTagName("tbody")[0].innerHTML= output;
+	}
+	
+}) ();

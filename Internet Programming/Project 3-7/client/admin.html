@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="client/css/style.css">
+      <script type="text/javascript" src="client/js/myScript.js"></script>
+      <title>Admin</title>
+  </head>
+
+  <body>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li><a href="/login"><b>Home</b></a></li>
+              <li><a href="/favourites"><b>Favourite places</b></a></li>
+              <li><a href="/addPlace"><b>Add Place</b></a></li>
+              <li><a href="/admin"><b>Admin</b></a></li>
+              <li><a href="/logout"><b>Logout</b></a></li>
+              <li><a href="/logout"><b>tuckn016</b></a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <input type="submit" value="Add User" onclick="addEmptyTableRow()">
+      </div>
+      <div class="container">
+        <form name="addUser" method="post" action="/postUser" id="formEdit">
+          <table class="table" id="userTable">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Login</th>
+                <th scope="col">New Password</th>
+                <th scope="col">Options</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </form>
+      </div>
+      <script type="text/javascript" src="client/js/scriptAdmin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+
+Refactor 2 for Iteration 3
+By: Alex Tuckner : 4730040 : tuckn016
+
+
+Change Variable and or Method names:
+
+List of the Variables being changed:
+	EventCollision ec(m_ent->get_entity_type(), m_ent->get_pos(), m_ent->get_heading_angle());
+	EventDistressCall ed(m_ent->get_entity_type(), m_ent->get_pos());
+
+
+
+The first Variable that I would like to give a more meaningful name is
+EventCollision objects that I create in the arena.  Previously I just 
+called them ec as such, but I feel I could give it a clearer name.
+
+This is written on line: 185 
+Original: EventCollision ec(m_ent->get_entity_type(), m_ent->get_pos(), m_ent->get_heading_angle());
+
+New: EventCollision event_coll(m_ent->get_entity_type(), m_ent->get_pos(), m_ent->get_heading_angle());
+
+
+
+The next variable that I would like to give a more meaningful name is in the same realm.
+I did the same name scheme with the EventProximity objects that I created in the arena 
+and are going to change those to be clearer to an outsider.
+
+This was written on lines: 200, 208, 216
+Original: EventDistressCall ed(m_ent->get_entity_type(), m_ent->get_pos());
+
+New: EventDistressCall event_dis(m_ent->get_entity_type(), m_ent->get_pos());
+
+
+
+These new names are better than the previous ones because firstly, they inform the
+programmer that they are events, just through the name without having to look for
+the instantiation of the variable.  In both cases they now at least specify what
+type of event they are without being too long or excessive.  
